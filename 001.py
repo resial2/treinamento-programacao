@@ -1,44 +1,41 @@
-def div(n1, n2):
-    return n1 / n2
+def somar(n1, n2):
+    return n1 + n2
 
 
 def sub(n1, n2):
     return n1 - n2
 
-def somar (a,b):
-    return a + b
 
-def multiplicar (a,b):
-    return a * b
+def multiplicar(n1, n2):
+    return n1 * n2
 
 
-n1 = int
-n2 = int
-resl = int
+def div(n1, n2):
+    return n1 / n2
 
-
-escl = int(input("digite 2 para divisão e 4 para subtração: "))
-if escl == 2:
-    n1 = int(input("digite o primeiro numero: "))
-    n2 = int(input("digite o segundo numero: "))
-    print(div(n1, n2))
-elif escl == 4:
-    n1 = int(input("digite o primeiro numero: "))
-    n2 = int(input("digite o segundo numero: "))
-    print(sub(n1, n2))
 
 n1 = int(input("Digite um número: "))
 n2 = int(input("Digite outro número: "))
 
-print("1 - Somar\n3 - Multiplicar")
+print('''
+[1] Somar
+[2] Subtrair
+[3] Multiplicar
+[4] Dividir
+''')
 
-opc = int(input('Opção selecionada: '))
+escl = int(input("Qual sua escolha: "))
 
-if(opc == 1):
-    resultado = somar(n1,n2)
+if escl == 1:
+    resl = somar(n1, n2)
+elif escl == 2:
+    resl = sub(n1, n2)
+elif escl == 3:
+    resl = multiplicar(n1, n2)
+elif escl == 4:
+    resl = div(n1, n2)
+else:
+    print("Caiu na casa do krl!!!! kskksksksksk")
+    resl = 0
 
-elif(opc == 3):
-    resultado = multiplicar(n1,n2)
-
-print("Resultado: " + str(resultado))
-
+print(f"O resultado é: {resl}")
